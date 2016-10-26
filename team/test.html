@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Shift</title>
+<style>
+
+div.container {
+    font-size: 12px;
+    color: #333;
+    font-family: 'Nanum Gothic', 'arial', 'Verdana', Dotum, AppleGothic, sans-serif;
+}
+footer {
+    color: black;
+    background-color: #555555;
+    text-align: center;
+    clear : both;
+    vertical-align:text-bottom;
+    padding:1em;
+
+}
+header {
+   padding: 1em;
+   background-color: #222222;
+   text-align:left;
+   border: 0px solid black;
+   font-size: 12px;
+   color: grey;
+}
+article {
+   padding:10%;
+   text-align:center;
+   vertical-align:middle;
+    background-color: #000000;
+}
+div.sub {
+   padding: 30%;
+   clear : both;
+   display: none;
+}
+div.img {
+    padding: 30%;
+    float: left;
+}
+div.desc {
+    padding: 10px;
+    text-align: center;
+}
+.responsive {
+    padding: 0px;
+    float: left;
+    width:25%;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.bodyDiv {
+   border: 1px;
+   color : white;
+   width: 70%;
+   height:80%;
+   margin-left: auto; 
+   margin-right: auto;
+   background-color: #222222;
+}
+
+</style>
+<script type= "text/javascript">
+document.createElement('article');
+document.createElement('header');
+document.createElement('footer');
+function changeMenuMouseOn(divId, imgId, color, subId){
+   var id = document.getElementById(imgId);
+   id.style.display="none";
+   id = document.getElementById(subId);
+   id.style.display="block";
+   id = document.getElementById(divId);
+   id.style.backgroundColor=color;
+   id.style.padding="1%";
+}
+
+function changeMenuMouseOut(divId, imgId, color, subId){
+   var id = document.getElementById(imgId);
+   id.style.display="inline";
+      id = document.getElementById(subId);
+      id.style.display="none";
+      id = document.getElementById(divId);
+      id.style.backgroundColor=color;
+   id.style.padding="30%";
+}
+</script>
+
+</head>
+<body>
+
+<div class="container">
+<article>
+<!-- Photo Grid -->
+<div class="bodyDiv">
+<iframe id="frame1" width='100%' style="border:0;">
+</iframe>     
+</div>
+<div class="clearfix"></div>
+<!-- End Page Content -->
+</article>      
+
+
+
+<!-- bottom -->
+<footer> Copyright © shift-group </footer>
+
+</div>
+
+
+
+
+
+</body>
+</html>

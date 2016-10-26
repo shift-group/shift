@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Shift</title>
+<style>
+
+div.container {
+    font-size: 12px;
+    color: #333;
+    font-family: 'Nanum Gothic', 'arial', 'Verdana', Dotum, AppleGothic, sans-serif;
+}
+footer {
+    color: black;
+    background-color: #555555;
+    text-align: center;
+    clear : both;
+    vertical-align:text-bottom;
+    padding:1em;
+
+}
+header {
+   padding: 1em;
+   background-color: #222222;
+   text-align:left;
+   border: 0px solid black;
+   font-size: 12px;
+   color: grey;
+}
+article {
+   padding:10%;
+   text-align:center;
+   vertical-align:middle;
+    background-color: #000000;
+}
+div.sub {
+   padding: 30%;
+   clear : both;-
+   display: none;
+}
+div.img {
+    padding: 30%;
+    float: left;
+}
+div.desc {
+    padding: 10px;
+    text-align: center;
+}
+.responsive {
+    padding: 0px;
+    float: left;
+    width:25%;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.bodyDiv {
+   border: 0px;
+   width: 70%;
+   margin-left: auto; 
+   margin-right: auto;
+}
+
+</style>
+<script type= "text/javascript">
+document.createElement('article');
+document.createElement('header');
+document.createElement('footer');
+function changeMenuMouseOn(divId, imgId, color, subId){
+   var id = document.getElementById(imgId);
+   id.style.display="none";
+   id = document.getElementById(subId);
+   id.style.display="block";
+   id = document.getElementById(divId);
+   id.style.backgroundColor=color;
+   id.style.padding="1%";
+}
+
+function changeMenuMouseOut(divId, imgId, color, subId){
+   var id = document.getElementById(imgId);
+   id.style.display="inline";
+      id = document.getElementById(subId);
+      id.style.display="none";
+      id = document.getElementById(divId);
+      id.style.backgroundColor=color;
+   id.style.padding="30%";
+}
+</script>
+
+</head>
+<body>
+
+<div class="container">
+<article>
+<!-- Photo Grid -->
+<div class="bodyDiv">
+   <div class="responsive">
+           <div class="img" id="dmenu1" style="background-color:#25592F;" onmouseover="javascript:changeMenuMouseOn('dmenu1','menu1','#0D3010','sub1')" onmouseout="changeMenuMouseOut('dmenu1','menu1','#25592F','sub1')">
+              <img id="menu1" src="img/intro.png" style="width:100%">
+         <div class=sub id="sub1" style="background-color:#0D3010;">
+         <img src="img/introtext.png" style="width:100%">
+         </div>
+           </div>
+           <div class="img" id="dmenu5" style="background-color:#10253F;" onmouseover="javascript:changeMenuMouseOn('dmenu5','menu5','#010720','sub5')" onmouseout="changeMenuMouseOut('dmenu5','menu5','#10253F','sub5')">
+              <img  id="menu5" src="img/chat.png" style="width:100%">
+           <div class=sub id="sub5" style="background-color:#010720;">
+         <img src="img/chattext.png" style="width:100%">
+</div></div>  
+     </div>
+     <div class="responsive">
+           <div class="img" id="dmenu2" style="background-color:#008A3E;" onmouseover="javascript:changeMenuMouseOn('dmenu2','menu2','#003509','sub2')" onmouseout="changeMenuMouseOut('dmenu2','menu2','#008A3E','sub2')">
+              <img  id="menu2" src="img/iot.png" style="width:100%">
+           <div class=sub id="sub2" style="background-color:#003509;">
+         <img src="img/iottext.png" style="width:100%">
+</div></div> 
+           <div class="img" id="dmenu6" style="background-color:#0070C0;" onmouseover="javascript:changeMenuMouseOn('dmenu6','menu6','#004590','sub6')" onmouseout="changeMenuMouseOut('dmenu6','menu6','#0070C0','sub6')">
+              <img  id="menu6" src="img/big.png" style="width:100%">
+           <div class=sub id="sub6" style="background-color:#004590;">
+         <img src="img/bigtext.png" style="width:100%">
+</div></div> 
+     </div>
+    <div class="responsive">
+           <div class="img" id="dmenu3" style="background-color:#AF2186;" onmouseover="javascript:changeMenuMouseOn('dmenu3','menu3','#690143','sub3')" onmouseout="changeMenuMouseOut('dmenu3','menu3','#AF2186','sub3')">
+              <img  id="menu3" src="img/team.png" style="width:100%">
+              <div class=sub id="sub3" style="background-color:690143;">
+         <img src="img/teamtext.png" style="width:100%">
+
+       </div></div> 
+           <div class="img" id="dmenu7" style="background-color:#8A0000;" onmouseover="javascript:changeMenuMouseOn('dmenu7','menu7','#5A0000','sub7')" onmouseout="changeMenuMouseOut('dmenu7','menu7','#8A0000','sub7')">
+              <img id="menu7" src="img/study.png" style="width:100%">
+           <div class=sub id="sub7" style="background-color:#5A0000;">
+         <img src="img/studytext.png" style="width:100%">
+</div></div> 
+     </div>     
+    <div class="responsive">
+           <div class="img" id="dmenu4" style="background-color:#881A69;" onmouseover="javascript:changeMenuMouseOn('dmenu4','menu4','#400030','sub4')" onmouseout="changeMenuMouseOut('dmenu4','menu4','#881A69','sub4')">
+              <img id="menu4" src="img/member.png" style="width:100%">
+              <div class=sub id="sub4" style="background-color:#400030;">
+                  <img src="img/membertext.png" style="width:100%"></div></div> 
+           <div class="img" id="dmenu8" style="background-color:#FFC819;" onmouseover="javascript:changeMenuMouseOn('dmenu8','menu8','#9C6500','sub8')" onmouseout="changeMenuMouseOut('dmenu8','menu8','#FFC819','sub8')">
+              <img id="menu8" src="img/set.png" style="width:100%">
+              <div class=sub id="sub8" style="background-color:#9C6500;">
+                  <img src="img/settext.png" style="width:100%"></div>
+           </div>
+     </div> 
+</div>
+<div class="clearfix"></div>
+<!-- End Page Content -->
+</article>      
+
+
+
+<!-- bottom -->
+<footer> Copyright © shift-group </footer>
+
+</div>
+
+
+
+
+
+</body>
+</html>

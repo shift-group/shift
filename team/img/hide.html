@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<style>
+
+div.container {
+	border: 0px solid black;
+	width: 100%;
+	height : 100%;
+    font-size: 12px;
+    line-height: 19px;
+    color: #333;
+    font-family: 'Nanum Gothic', 'arial', 'Verdana', Dotum, AppleGothic, sans-serif;
+}
+header {
+    padding: 1em;
+	text-align: left;
+	padding: 20px;
+	font-weight:bold;
+	font-size:12px;
+}
+
+footer {
+    padding: 1em;
+    color: black;
+    background-color: #555555;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    margin: 10;
+    padding: 20px;
+	text-align: right;
+}
+
+nav td {
+	padding: 10px 10px;
+}
+nav td:hover {
+	color: #aa5522;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul a {
+    text-decoration: none;
+    color : #333;
+}
+nav ul a:hover {
+	list-style-type: none;
+    color: #aa5522;
+}
+
+article {
+    padding: 1em;
+    align: center;
+    background-color: #000000;
+}
+
+.button {
+    background-color: #ffeedd;
+    color: #775522;
+    border: 0px ;
+    padding: 7px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 0px 0px;
+    width:200px;
+    heigh:50px;
+}
+ 
+.button:hover {
+    background-color: #ffddaa; 
+    color: #aa5522;
+}
+
+div.menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+table.dropdown-content {
+	border-collapse: collapse;
+	padding: 10px;
+	text-align: left;
+	min-width:100px;
+}
+span {
+	font-size:15px;
+	font-family: 'Nanum Gothic';
+	color : #991144;
+}
+
+div.img {
+    margin: 0px;
+    border: 0px solid #ccc;
+    float: left;
+    overflow: hidden;
+	width: 100%;
+    height:auto;
+    background-color: #fff9f9;
+}
+
+div.img:hover {
+    border: 0px solid #777;
+}
+div.desc {
+    padding: 10px;
+    text-align: center;
+}
+.responsive {
+    padding: 0px;
+    float: left;
+    width:25%;
+}
+.imgOut {
+	overflow: hidden; 
+	width:70%;
+	margin:15%;
+	border: 0px solid #777;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sub{
+	display:none;
+}
+</style>
+<script type= "text/javascript">
+function changeMenuMouseOn(imgId, subId){
+   //var divTest = document.getElementById(did);
+   imgId.style.display="none";
+   subId.style.display="block";
+//   conId.getElementById(conId).style.display="block";
+}
+
+function changeMenuMouseOut(imgId, subId){
+//   var divTest = document.getElementById(did);
+   imgId.style.display="inline";
+   subId.style.display="none";
+//   conId.getElementById(imgId).style.display="block";
+}
+</script>
+<!--------------------------------------------------------
+<script type= "text/javascript">
+function changeMenuMouseOn(did, imgId, conId){
+	var divTest = document.getElementById(did);
+	document.getElementById(imgId).style.display=none;
+	document.getElementById(conId).style.display=block;
+}
+function changeMenuMouseOut(did, imgId, conId){
+	var divTest = document.getElementById(did);
+	document.getElementById(conId).style.display=none;
+	document.getElementById(imgId).style.display=block;
+}
+</script>
+-------------------------------------------------------->
+</head>
+<body>
+
+<div class="container">
+<article>
+<!-- Photo Grid -->
+<div class="imgOut" id="myGrid" align="center">
+   <div class="responsive">
+           <div class="img" id="d-menu1" style="background-color:#25592F"><img id="menu1" src="img/intro.png" style="width:100%"><div class=menu-content id="m_con1">1</div></div>
+           <div class="sub" id="sub1" ><font color="white" size="10px"><p>SHIFT</p><p>소개</p></font></div> 
+           <div class="img" id="d-menu5" style="background-color:#10253F"><img onmouseover="javascript:changeMenuMouseOn(menu5,sub5)" onmouseleave="changeMenuMouseOut(menu5,sub5)" id="menu5" src="img/chat.png" style="width:100%"><div class=menu-content>5</div></div>
+        <div class="sub" id="sub5" style="background-color:#10253F"><font color="white" size="10px"><p>채팅</p><p>공간</p></font></div>
+     </div>
+     <div class="responsive">
+           <div class="img" id="d-menu2" style="background-color:#008A3E"><img onmouseover="javascript:changeMenuMouseOn(menu2,sub2)" onmouseleave="changeMenuMouseOut(menu2,sub2)" id="menu2" src="img/iot.png" style="width:100%"><div class=menu-content>2</div></div>
+           <div class="sub" id="sub2" style="background-color:#008A3E"><font color="white" size="10px"><p>IOT</p><p>소개</p></font></div> 
+           <div class="img" id="d-menu6" style="background-color:#0070C0"><img onmouseover="javascript:changeMenuMouseOn(menu6,sub6)" onmouseleave="changeMenuMouseOut(menu6,sub6)" id="menu6" src="img/addr.png" style="width:100%"><div class=menu-content>6</div></div>
+           <div class="sub" id="sub6" style="background-color:#0070C0"><font color="white" size="10px"><p>IOT멤버</p><p>주소록</p></font></div> 
+     </div>
+    <div class="responsive">
+           <div class="img" id="d-menu3" style="background-color:#AF2186"><img onmouseover="javascript:changeMenuMouseOn(menu3,sub3)" onmouseleave="changeMenuMouseOut(menu3,sub3)" id="menu3" src="img/team.png" style="width:100%"><div class=menu-content>3</div></div>
+           <div class="sub" id="sub3" style="background-color:#AF2186"><font color="white" size="7px"><p>프로젝트</p><p>소개</p></font></div>
+           <div class="img" id="d-menu7" style="background-color:#8A0000"><img onmouseover="javascript:changeMenuMouseOn(menu7,sub7)" onmouseleave="changeMenuMouseOut(menu7,sub7)" id="menu7" src="img/site.png" style="width:100%"><div class=menu-content>7</div></div>
+           <div class="sub" id="sub7" style="background-color:#8A0000"><font color="white" size="10px"><p>유용한</p><p>사이트</p></font></div>
+     </div>     
+    <div class="responsive">
+           <div class="img" id="d-menu4" style="background-color:#881A69"><img onmouseover="javascript:changeMenuMouseOn(menu4,sub4)" onmouseleave="changeMenuMouseOut(menu4,sub4)" id="menu4" src="img/member.png" style="width:100%"><div class=menu-content>4</div></div>
+           <div class="sub" id="sub4" style="background-color:#881A69"><font color="white" size="10px"><p>팀원</p><p>소개</p></font></div>
+           <div class="img" id="d-menu8" style="background-color:#FFC819"><img onmouseover="javascript:changeMenuMouseOn(menu8,sub8)" onmouseleave="changeMenuMouseOut(menu8,sub8)" id="menu8" src="img/set.png" style="width:100%"><div class=menu-content>8</div></div>
+           <div class="sub" id="sub8" style="background-color:#FFC819"><font color="white" size="10px"><p>환경</p><p>설정</p></font></div>
+     </div> 
+</div>
+
+<div class="clearfix"></div>
+<!-- End Page Content -->
+</article>		
+
+
+
+<!-- bottom -->
+<footer> Copyright ⓒ shift-group </footer>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
