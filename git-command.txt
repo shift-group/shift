@@ -4,9 +4,11 @@ $ git clone https://github.com/shift-group/shift.git
 
 
 // 내 폴더나 파일 리모트(github)로 올릴때
-$ git add team
+$ git add teamgit-co
 $ git commit       // 여기서 올릴 파일의 # 을 제거해주고 :wq 로 vi 편집을 저장하고 빠져나옴
 $ git push
 Username for 'https://github.com': appleeh@naver.com  	// 등록했을때 id 입력 -- 이메일 주소
 							// password 입력
  
+$ git add git-command.txt
+$ git push -u origin master
